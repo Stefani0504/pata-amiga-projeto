@@ -1,0 +1,65 @@
+/* CSS Customizado - Pata Amiga */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-verde-oliva: #788A3F;
+  --color-bege-claro: #F2D1B3;
+  --color-marrom-escuro: #732C02;
+  --color-marrom-medio: #8C5B3F;
+  --color-rosa-salmao: #F27D72;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #FAFAFA;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Paleta de Cores Customizada */
+.bg-verde-oliva { background-color: var(--color-verde-oliva); }
+.text-verde-oliva { color: var(--color-verde-oliva); }
+
+.bg-bege-claro { background-color: var(--color-bege-claro); }
+.text-bege-claro { color: var(--color-bege-claro); }
+
+.bg-marrom-escuro { background-color: var(--color-marrom-escuro); }
+.text-marrom-escuro { color: var(--color-marrom-escuro); }
+
+.bg-marrom-medio { background-color: var(--color-marrom-medio); }
+.text-marrom-medio { color: var(--color-marrom-medio); }
+
+.bg-rosa-salmao { background-color: var(--color-rosa-salmao); }
+.text-rosa-salmao { color: var(--color-rosa-salmao); }
+
+/* Sombras e Animações */
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px -10px rgba(115, 44, 2, 0.15);
+}
+
+.btn-primary {
+  background-color: var(--color-verde-oliva);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #647333;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--color-rosa-salmao);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: #E2685D;
+  transform: translateY(-1px);
+}

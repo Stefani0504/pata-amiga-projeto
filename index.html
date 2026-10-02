@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pata Amiga - Clínica Veterinária e Petshop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'verde-oliva': '#788A3F',
+            'bege-claro': '#F2D1B3',
+            'marrom-escuro': '#732C02',
+            'marrom-medio': '#8C5B3F',
+            'rosa-salmao': '#F27D72',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-3">
+      <svg class="w-10 h-10 text-verde-oliva" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 35C40 20 20 25 20 42C20 60 50 80 50 80C50 80 80 60 80 42C80 25 60 20 50 35Z" fill="#F27D72"/>
+        <ellipse cx="30" cy="25" rx="8" ry="12" fill="#788A3F" transform="rotate(-20 30 25)"/>
+        <ellipse cx="43" cy="18" rx="8" ry="12" fill="#788A3F" transform="rotate(-5 43 18)"/>
+        <ellipse cx="57" cy="18" rx="8" ry="12" fill="#788A3F" transform="rotate(5 57 18)"/>
+        <ellipse cx="70" cy="25" rx="8" ry="12" fill="#788A3F" transform="rotate(20 70 25)"/>
+      </svg>
+      <div>
+        <span class="text-2xl font-extrabold text-marrom-escuro tracking-tight block leading-none">Pata Amiga</span>
+        <span class="text-xs font-medium text-marrom-medio tracking-wider uppercase">Cuidado & Carinho Pet</span>
+      </div>
+    </a>
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a href="index.html" class="nav-link hover:text-verde-oliva transition text-verde-oliva font-bold border-b-2 border-verde-oliva">Início</a>
+      <a href="sobre.html" class="nav-link hover:text-verde-oliva transition ">Sobre Nós</a>
+      <a href="servicos.html" class="nav-link hover:text-verde-oliva transition ">Serviços</a>
+      <a href="contato.html" class="nav-link hover:text-verde-oliva transition ">Contato</a>
+    </nav>
+    <div class="hidden md:block">
+      <button class="btn-primary px-5 py-2.5 rounded-full font-semibold shadow-sm btn-open-modal">Agendar Consulta</button>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden text-marrom-escuro focus:outline-none">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-2">
+    <a href="index.html" class="block py-2 text-gray-700 font-medium hover:text-verde-oliva">Início</a>
+    <a href="sobre.html" class="block py-2 text-gray-700 font-medium hover:text-verde-oliva">Sobre Nós</a>
+    <a href="servicos.html" class="block py-2 text-gray-700 font-medium hover:text-verde-oliva">Serviços</a>
+    <a href="contato.html" class="block py-2 text-gray-700 font-medium hover:text-verde-oliva">Contato</a>
+    <button class="w-full mt-2 btn-primary py-2.5 rounded-full font-semibold btn-open-modal">Agendar Consulta</button>
+  </div>
+</header>
+
+  <main class="flex-grow">
+    <!-- Banner Principal -->
+    <section class="bg-gradient-to-r from-bege-claro/40 to-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-verde-oliva/10 text-verde-oliva px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Cuidado Especializado</span>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-marrom-escuro leading-tight mb-6">O melhor carinho para quem sempre está ao seu lado</h1>
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed">Atendimento veterinário humanizado, estética pet completa e toda a atenção dedicada para a saúde do seu pet.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="btn-primary px-8 py-3.5 rounded-full font-bold shadow-lg btn-open-modal text-center">Agendar Horário</button>
+            <a href="servicos.html" class="border-2 border-marrom-medio text-marrom-medio hover:bg-marrom-medio hover:text-white px-8 py-3.5 rounded-full font-bold transition text-center">Nossos Serviços</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="bg-verde-oliva/20 rounded-3xl p-4 transform rotate-2">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Cão e Gato felizes" class="rounded-2xl shadow-xl transform -rotate-2 object-cover h-96 w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destaques -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-marrom-escuro mb-4">Por que escolher a Pata Amiga?</h2>
+          <p class="text-gray-600">Unimos amor pelos animais com excelência em serviços veterinários.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-bege-claro/20 border border-bege-claro card-hover text-center">
+            <div class="w-14 h-14 bg-verde-oliva text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md text-2xl font-bold">🩺</div>
+            <h3 class="text-xl font-bold text-marrom-escuro mb-2">Equipe Qualificada</h3>
+            <p class="text-gray-600 text-sm">Veterinários experientes e apaixonados pelo bem-estar animal.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-bege-claro/20 border border-bege-claro card-hover text-center">
+            <div class="w-14 h-14 bg-rosa-salmao text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md text-2xl font-bold">🛁</div>
+            <h3 class="text-xl font-bold text-marrom-escuro mb-2">Banho & Tosa SPA</h3>
+            <p class="text-gray-600 text-sm">Produtos hipoalergênicos e ambiente calmo livre de estresse.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-bege-claro/20 border border-bege-claro card-hover text-center">
+            <div class="w-14 h-14 bg-marrom-medio text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md text-2xl font-bold">🚨</div>
+            <h3 class="text-xl font-bold text-marrom-escuro mb-2">Plantão de Emergência</h3>
+            <p class="text-gray-600 text-sm">Pronto atendimento para quando seu pet mais precisar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada para ação -->
+    <section class="bg-rosa-salmao text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Seu pet merece o melhor atendimento!</h2>
+        <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">Venha nos conhecer e ganhe uma avaliação gratuita no primeiro banho e tosa.</p>
+        <button class="bg-white text-marrom-escuro hover:bg-bege-claro px-8 py-4 rounded-full font-bold text-lg shadow-lg transition btn-open-modal">Agendar Primeira Consulta</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-marrom-escuro text-white pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <div class="flex items-center space-x-3 mb-4">
+        <svg class="w-8 h-8 text-rosa-salmao" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 35C40 20 20 25 20 42C20 60 50 80 50 80C50 80 80 60 80 42C80 25 60 20 50 35Z" fill="#F27D72"/>
+          <ellipse cx="30" cy="25" rx="8" ry="12" fill="#F2D1B3" transform="rotate(-20 30 25)"/>
+          <ellipse cx="43" cy="18" rx="8" ry="12" fill="#F2D1B3" transform="rotate(-5 43 18)"/>
+          <ellipse cx="57" cy="18" rx="8" ry="12" fill="#F2D1B3" transform="rotate(5 57 18)"/>
+          <ellipse cx="70" cy="25" rx="8" ry="12" fill="#F2D1B3" transform="rotate(20 70 25)"/>
+        </svg>
+        <span class="text-xl font-bold">Pata Amiga</span>
+      </div>
+      <p class="text-bege-claro text-sm">Oferecendo o melhor cuidado, amor e bem-estar para o seu melhor amigo de quatro patas.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold text-lg mb-3 text-bege-claro">Navegação</h4>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="index.html" class="hover:text-rosa-salmao transition">Início</a></li>
+        <li><a href="sobre.html" class="hover:text-rosa-salmao transition">Sobre Nós</a></li>
+        <li><a href="servicos.html" class="hover:text-rosa-salmao transition">Serviços</a></li>
+        <li><a href="contato.html" class="hover:text-rosa-salmao transition">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold text-lg mb-3 text-bege-claro">Horário de Atendimento</h4>
+      <p class="text-sm text-gray-300">Segunda - Sexta: 08:00 - 19:00</p>
+      <p class="text-sm text-gray-300">Sábado: 08:00 - 14:00</p>
+      <p class="text-sm text-rosa-salmao font-medium mt-2">Emergências 24h</p>
+    </div>
+    <div>
+      <h4 class="font-semibold text-lg mb-3 text-bege-claro">Contato</h4>
+      <p class="text-sm text-gray-300">Rua dos Pets, 123 - Sorocaba, SP</p>
+      <p class="text-sm text-gray-300">Telefone: (15) 99999-8888</p>
+      <p class="text-sm text-gray-300">Email: contato@pataamiga.com.br</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 border-t border-marrom-medio/40 pt-6 text-center text-sm text-bege-claro/70">
+    &copy; 2026 Pata Amiga. Todos os direitos reservados.
+  </div>
+</footer>
+
+<!-- Modal Agendamento -->
+<div id="modal-agendamento" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+    <button id="btn-close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+    <h3 class="text-2xl font-bold text-marrom-escuro mb-2">Agendar Atendimento</h3>
+    <p class="text-sm text-gray-600 mb-6">Preencha os dados abaixo para solicitar um horário para seu pet.</p>
+    <form class="space-y-4">
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-700 mb-1">Seu Nome</label>
+        <input type="text" required placeholder="Ex: Maria Silva" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-verde-oliva focus:outline-none text-sm">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-700 mb-1">Nome do Pet</label>
+        <input type="text" required placeholder="Ex: Rex" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-verde-oliva focus:outline-none text-sm">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-700 mb-1">Serviço</label>
+        <select class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-verde-oliva focus:outline-none text-sm">
+          <option>Consulta Veterinária</option>
+          <option>Banho e Tosa Especial</option>
+          <option>Vacinação e Prevenção</option>
+          <option>Odontologia Pet</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-semibold uppercase text-gray-700 mb-1">Telefone / WhatsApp</label>
+        <input type="tel" required placeholder="(15) 99999-9999" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-verde-oliva focus:outline-none text-sm">
+      </div>
+      <button type="submit" class="w-full btn-primary py-3 rounded-xl font-bold shadow-md hover:bg-verde-oliva/90 transition">Confirmar Agendamento</button>
+    </form>
+  </div>
+</div>
+  <script src="js/main.js"></script>
+</body>
+</html>
